@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frame | Photography Gallery</title>
+
+    <link rel="stylesheet" href="stylingGallery.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">frame<span>.</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#gallery" class="nav-button">Explore Photos ↗</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="eyebrow">A COLLECTION OF MOMENTS</p>
+
+            <h1>
+                The world, <br>
+                through <span>our lens.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover the beauty in ordinary moments,
+                extraordinary places, and everything in between.
+            </p>
+
+            <a href="#gallery" class="explore-link">
+            
+            </a>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="section-heading">
+                <div>
+                <p class="eyebrow">CURATED PHOTOGRAPHY</p>
+                <h2>Selected frames</h2>
+                </div>
+
+                <p class="photo-count">08 photographs</p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                        alt="Scenic mountain landscape"
+                    >
+                    <div class="photo-info">
+                        <h3>Into the Wild</h3>
+                        <p>Nature · 01</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=80"
+                        alt="Ocean waves meeting the shore"
+                    >
+                    <div class="photo-info">
+                        <h3>Ocean Stories</h3>
+                        <p>Nature · 02</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"
+                        alt="Night sky filled with stars"
+                    >
+                    <div class="photo-info">
+                        <h3>Beyond the Stars</h3>
+                        <p>Night Sky · 03</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80"
+                        alt="Mountain lake surrounded by nature"
+                    >
+                    <div class="photo-info">
+                        <h3>Quiet Escape</h3>
+                        <p>Travel · 04</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"
+                        alt="Snow-covered mountains beneath the stars"
+                    >
+                    <div class="photo-info">
+                        <h3>Frozen Peaks</h3>
+                        <p>Mountains · 05</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                        alt="Sunlight filtering through a forest"
+                    >
+                    <div class="photo-info">
+                        <h3>Forest Light</h3>
+                        <p>Nature · 06</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80"
+                        alt="Sunrise over a peaceful landscape"
+                    >
+                    <div class="photo-info">
+                        <h3>Golden Morning</h3>
+                        <p>Landscape · 07</p>
+                    </div>
+                </article>
+
+                <article class="photo-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+                        alt="Beautiful mountain scenery beside a lake"
+                    >
+                    <div class="photo-info">
+                        <h3>Nature's Calm</h3>
+                        <p>Travel · 08</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">OUR LITTLE CORNER</p>
+            <h2>Every picture tells a story.</h2>
+            <p>
+                Frame is a photography gallery created to celebrate
+                the places, people, and moments worth remembering.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Frame Photography Gallery</p>
+        <p>Made with creativity & code.</p>
+      
+    </footer>
+
+<!-- Image Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image viewer"
+    >&times;</button>
+
+    <button
+        class="lightbox-arrow lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+    >&#10094;</button>
+
+    <figure class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+
+        <figcaption>
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxCounter"></p>
+        </figcaption>
+    </figure>
+
+    <button
+        class="lightbox-arrow lightbox-next"
+        id="lightboxNext"
+        aria-label="Next image"
+    >&#10095;</button>
+
+</div>
+<script src="myScript.js"></script>
+</body>
+</html>
